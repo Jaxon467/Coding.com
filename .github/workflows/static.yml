@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Learn Programming</title>
+</head>
+<body>
+    <header>
+        <h1>Learn HTML, CSS, Java, and JavaScript</h1>
+        <nav>
+            <ul>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#java">Java</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="html">
+            <h2>HTML Basics</h2>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+            <button onclick="showExample('htmlExample')">Show HTML Example</button>
+            <div id="htmlExample" class="example"></div>
+        </section>
+
+        <section id="css">
+            <h2>CSS Basics</h2>
+            <p>CSS (Cascading Style Sheets) describes how HTML elements are to be displayed on screen.</p>
+            <button onclick="showExample('cssExample')">Show CSS Example</button>
+            <div id="cssExample" class="example"></div>
+        </section>
+
+        <section id="java">
+            <h2>Java Basics</h2>
+            <p>Java is a high-level programming language that is class-based and object-oriented.</p>
+            <button onclick="showExample('javaExample')">Show Java Example</button>
+            <div id="javaExample" class="example"></div>
+        </section>
+
+        <section id="javascript">
+            <h2>JavaScript Basics</h2>
+            <p>JavaScript is a programming language that allows you to implement complex features on web pages.</p>
+            <button onclick="showExample('jsExample')">Show JavaScript Example</button>
+            <div id="jsExample" class="example"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Learn Programming. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+.example {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+</style>
+<script>
+    function showExample(exampleId) {
+    let exampleDiv = document.getElementById(exampleId);
+    if (exampleId === 'htmlExample') {
+        exampleDiv.innerHTML = `<pre><code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;&lt;title&gt;My First HTML Page&lt;/title&gt;&lt;/head&gt;<br>&lt;body&gt;<br>&lt;h1&gt;Hello World!&lt;/h1&gt;<br>&lt;p&gt;This is a simple HTML page.&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></pre>`;
+    } else if (exampleId === 'cssExample') {
+        exampleDiv.innerHTML = `<pre><code>body {<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br><br>h1 {<br>&nbsp;&nbsp;color: navy;<br>&nbsp;&nbsp;font-family: Arial;<br>}</code></pre>`;
+    } else if (exampleId === 'javaExample') {
+        exampleDiv.innerHTML = `<pre><code>public class HelloWorld {<br>&nbsp;&nbsp;public static void main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello, World!");<br>&nbsp;&nbsp;}<br>}</code></pre>`;
+    } else if (exampleId === 'jsExample') {
+        exampleDiv.innerHTML = `<pre><code>function greet() {<br>&nbsp;&nbsp;alert("Hello, World!");<br>}<br><br>greet();</code></pre>`;
+    }
+}
+
+</script>
